@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo VIP - Promoção Relâmpago</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2036397443882964');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2036397443882964&ev=PageView&noscript=1"
+/></noscript>
+
+<style>
+:root {
+    --roxo-escuro: #12091f;
+    --roxo: #2d1650;
+    --roxo-claro: #4b2a82;
+    --dourado: #FFD700;
+    --texto: #e8e6f0;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Poppins", system-ui, Arial, sans-serif;
+    color: var(--texto);
+    text-align: center;
+    background: linear-gradient(-45deg, var(--roxo-escuro), var(--roxo), #1a0f2e);
+    background-size: 300% 300%;
+    animation: fundo 18s ease infinite;
+    overflow: hidden;
+}
+@keyframes fundo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.titulo-topo {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.05);
+    font-weight: 900;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    color: var(--dourado);
+    text-shadow: 0 0 10px rgba(255,215,0,.7), 0 0 25px rgba(255,215,0,.6), 0 0 45px rgba(255,215,0,.45);
+    font-size: clamp(3.8rem, 13vw, 5.8rem);
+}
+
+.promocao-relampago {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e63939;
+    color: white;
+    font-weight: 900;
+    padding: 10px 32px;
+    border-radius: 50px;
+    font-size: 1.45rem;
+    letter-spacing: 3px;
+    white-space: nowrap;           /* ← Garante que fique em uma linha só */
+    box-shadow: 0 0 25px rgba(230, 57, 57, 0.9);
+    animation: piscar 1.4s infinite;
+    z-index: 10;
+}
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.75; }
+}
+
+.conteudo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+}
+
+/* Preço antigo tachado */
+.valor-antigo {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-bottom: 6px;
+}
+
+/* "Por apenas" pequeno */
+.por-apenas {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffd700;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+/* Preço novo grande */
+.valor {
+    font-size: 5.4rem;
+    font-weight: 900;
+    color: var(--dourado);
+    line-height: 1;
+    margin-bottom: 12px;
+    animation: pulse 2s infinite ease-in-out;
+}
+.valor small {
+    font-size: 0.4em;
+    vertical-align: super;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.09); }
+    100% { transform: scale(1); }
+}
+
+.area-pix {
+    width: 100%;
+    max-width: 420px;
+    padding: 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(75,42,130,0.35), rgba(45,22,80,0.35));
+    border: 1px solid rgba(255,215,0,0.25);
+    margin: 20px 0;
+}
+
+.texto-pix {
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+button {
+    width: 100%;
+    max-width: 420px;
+    padding: 18px;
+    border-radius: 14px;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #000;
+    background: linear-gradient(135deg, #FFD700, #e6c200);
+    box-shadow: 0 10px 22px rgba(255,215,0,0.6);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: 0.25s;
+    margin-bottom: 12px;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.15);
+}
+
+#mensagem-copiado {
+    height: 22px;
+    font-size: 0.95rem;
+    color: var(--dourado);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.aviso {
+    font-size: 0.9rem;
+    color: #d6d2e5;
+    max-width: 420px;
+}
+</style>
+</head>
+<body>
+
+<div class="titulo-topo">GRUPO VIP</div>
+
+<!-- Promoção Relâmpago em uma única linha -->
+<div class="promocao-relampago">🔥 PROMOÇÃO RELÂMPAGO 🔥</div>
+
+<div class="conteudo">
+    <div class="valor-antigo">De R$ 15,00</div>
+    
+    <div class="por-apenas">Por apenas</div>
+    <div class="valor">R$ 4,99</div>
+
+    <div class="area-pix">
+        <div class="texto-pix">
+            Chave PIX: <b>pagamentovip10@gmail.com</b>
+        </div>
+    </div>
+
+    <button onclick="copiarPix()">📋 Copiar chave PIX</button>
+    <div id="mensagem-copiado"></div>
+    
+    <button onclick="enviarComprovante()">📨 Enviar comprovante</button>
+    
+    <div class="aviso">
+        Após o pagamento, envie o comprovante para liberar o acesso imediatamente.
+    </div>
+</div>
+
+<script>
+function copiarPix() {
+    const chave = "pagamentovip10@gmail.com";
+    navigator.clipboard.writeText(chave).then(() => {
+        const msg = document.getElementById("mensagem-copiado");
+        msg.innerText = "✅ Chave copiada com sucesso!";
+        msg.style.opacity = 1;
+        setTimeout(() => msg.style.opacity = 0, 2500);
+        fbq('trackCustom', 'CopiarChavePix', { content_name: 'Grupo VIP' });
+    });
+}
+
+function enviarComprovante() {
+    fbq('trackCustom', 'EnviarComprovante', {
+        value: 4.99,
+        currency: 'BRL',
+        content_name: 'Grupo VIP - Promoção Relâmpago'
+    });
+    window.open('https://t.me/ADM_GRUPOVIP8', '_blank');
+}
+
+fbq('track', 'ViewContent');
+</script>
+</body>
+</html>
