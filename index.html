@@ -1,107 +1,117 @@
-```html
-<meta property="og:title" content="VIP - Konten Eksklusif">
-<meta property="og:description" content="Klik untuk melanjutkan dan mengakses konten VIP sekarang.">
-<meta property="og:type" content="website">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klik untuk Melanjutkan</title>
+    
+    <meta property="og:title" content="VIP - Konten Eksklusif">
+    <meta property="og:description" content="Klik untuk melanjutkan dan akses konten VIP sekarang.">
+    <meta property="og:type" content="website">
 
-<style>
-    body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #1a0000, #330000, #660000);
-        overflow: hidden;
-        position: relative;
-    }
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 48px 140px;
-        font-size: 2.65rem;
-        font-family: 'Impact', sans-serif;
-        font-weight: 700;
-        color: #ffffff;
-        background: linear-gradient(90deg, #FF2D00, #FF6B00, #FF00B8, #C800FF);
-        border: none;
-        border-radius: 9999px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        box-shadow: 0 0 90px #FF00FF,
-                    0 0 160px #FF4500,
-                    0 0 220px #FF1493,
-                    inset 0 10px 30px rgba(255,255,255,0.5);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-        line-height: 1.05;
-        animation: pulse 2.4s infinite ease-in-out;
-        white-space: nowrap;
-        -webkit-text-stroke: 3px #000000;
-        text-stroke: 3px #000000;
-        paint-order: stroke fill;
-    }
-    .btn:hover {
-        transform: scale(1.08);
-    }
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.085); }
-        100% { transform: scale(1); }
-    }
-    .btn::before {
-        content: '';
-        position: absolute;
-        top: -60%;
-        left: -60%;
-        width: 220%;
-        height: 220%;
-        background: radial-gradient(circle, rgba(255,255,255,0.55) 20%, transparent 70%);
-        animation: neonGlow 2.5s linear infinite;
-        opacity: 0.45;
-    }
-    @keyframes neonGlow {
-        0% { transform: translate(20%, 20%); }
-        50% { transform: translate(-20%, -20%); }
-        100% { transform: translate(20%, 20%); }
-    }
-
-    .clicky-badge-link {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        width: 1px !important;
-        height: 1px !important;
-        opacity: 0.001 !important;
-        z-index: -9999 !important;
-        pointer-events: none !important;
-        overflow: hidden !important;
-    }
-</style>
-```
-
-```html
-<script>
-    const button = document.querySelector('.btn');
-    button.addEventListener('click', function(e) {
-        for(let i = 0; i < 80; i++) {
-            const spark = document.createElement('div');
-            spark.style.position = 'fixed';
-            spark.style.fontSize = '2.3rem';
-            spark.style.left = (e.clientX + (Math.random() - 0.5) * 160) + 'px';
-            spark.style.top = (e.clientY + (Math.random() - 0.5) * 110) + 'px';
-            spark.style.pointerEvents = 'none';
-            spark.style.zIndex = '9999';
-            spark.textContent = ['🔥','💥','❤️‍🔥','🌟'][Math.floor(Math.random()*4)];
-            document.body.appendChild(spark);
-            setTimeout(() => spark.remove(), 1600);
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a0000, #330000, #660000);
+            overflow: hidden;
+            position: relative;
         }
-    });
-</script>
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 140px;
+            font-size: 2.65rem;
+            font-family: 'Impact', sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(90deg, #FF2D00, #FF6B00, #FF00B8, #C800FF);
+            border: none;
+            border-radius: 9999px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            box-shadow: 0 0 90px #FF00FF,
+                        0 0 160px #FF4500,
+                        0 0 220px #FF1493,
+                        inset 0 10px 30px rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            line-height: 1.05;
+            animation: pulse 2.4s infinite ease-in-out;
+            white-space: nowrap;
+            -webkit-text-stroke: 3px #000000;
+            text-stroke: 3px #000000;
+            paint-order: stroke fill;
+        }
+        .btn:hover {
+            transform: scale(1.08);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.085); }
+            100% { transform: scale(1); }
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            left: -60%;
+            width: 220%;
+            height: 220%;
+            background: radial-gradient(circle, rgba(255,255,255,0.55) 20%, transparent 70%);
+            animation: neonGlow 2.5s linear infinite;
+            opacity: 0.45;
+        }
+        @keyframes neonGlow {
+            0% { transform: translate(20%, 20%); }
+            50% { transform: translate(-20%, -20%); }
+            100% { transform: translate(20%, 20%); }
+        }
 
-<a title="Alternatif untuk Google Analytics" href="https://clicky.com/101507331" class="clicky-badge-link"></a>
-<script async data-id="101507331" src="//static.getclicky.com/js"></script>
-```
+        .clicky-badge-link {
+            position: fixed !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            width: 1px !important;
+            height: 1px !important;
+            opacity: 0.001 !important;
+            z-index: -9999 !important;
+            pointer-events: none !important;
+            overflow: hidden !important;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.effectivecpmnetwork.com/zw7252x6a?key=4444e33bced25455b9bb8edb2370fb8b" class="btn" target="_blank">
+        KLIK DI SINI<br>UNTUK MELANJUTKAN
+    </a>
+
+    <script>
+        const button = document.querySelector('.btn');
+        button.addEventListener('click', function(e) {
+            for(let i = 0; i < 80; i++) {
+                const spark = document.createElement('div');
+                spark.style.position = 'fixed';
+                spark.style.fontSize = '2.3rem';
+                spark.style.left = (e.clientX + (Math.random() - 0.5) * 160) + 'px';
+                spark.style.top = (e.clientY + (Math.random() - 0.5) * 110) + 'px';
+                spark.style.pointerEvents = 'none';
+                spark.style.zIndex = '9999';
+                spark.textContent = ['🔥','💥','❤️‍🔥','🌟'][Math.floor(Math.random()*4)];
+                document.body.appendChild(spark);
+                setTimeout(() => spark.remove(), 1600);
+            }
+        });
+    </script>
+
+    <a title="Google Analytics Alternative" href="https://clicky.com/101507331" class="clicky-badge-link"></a>
+    <script async data-id="101507331" src="//static.getclicky.com/js"></script>
+</body>
+</html>
