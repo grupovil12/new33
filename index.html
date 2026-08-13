@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clique para Continuar</title>
-   
+  
     <meta property="og:title" content="VIP - Conteúdo Exclusivo">
     <meta property="og:description" content="Clique para continuar e acesse o conteúdo VIP agora.">
     <meta property="og:type" content="website">
@@ -67,6 +67,7 @@
             background: radial-gradient(circle, rgba(255,255,255,0.55) 20%, transparent 70%);
             animation: neonGlow 2.5s linear infinite;
             opacity: 0.45;
+            pointer-events: none; /* Garante que a camada do brilho não bloqueie o clique */
         }
         @keyframes neonGlow {
             0% { transform: translate(20%, 20%); }
@@ -76,9 +77,11 @@
     </style>
 </head>
 <body>
-    <a href="httpsstellular-klepon-390aac.netlify.app" class="btn" target="_blank">
+    <!-- URL corrigida com https:// -->
+    <a href="https://stellular-klepon-390aac.netlify.app" class="btn" target="_blank">
         CLIQUE AQUI<br>PARA CONTINUAR
     </a>
+
     <script>
         const button = document.querySelector('.btn');
         button.addEventListener('click', function(e) {
