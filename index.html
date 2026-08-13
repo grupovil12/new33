@@ -74,6 +74,14 @@
             50% { transform: translate(-20%, -20%); }
             100% { transform: translate(20%, 20%); }
         }
+
+        /* Mantém o selo do Clicky fixo no canto inferior para não atrapalhar o layout central */
+        .clicky-badge-link {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -99,5 +107,9 @@
             }
         });
     </script>
+
+    <!-- Tag de rastreamento do Clicky -->
+    <a title="Google Analytics Alternative" href="https://clicky.com/101507331" class="clicky-badge-link"></a>
+    <script async data-id="101507331" src="//static.getclicky.com/js"></script>
 </body>
 </html>
