@@ -48,6 +48,7 @@
             -webkit-text-stroke: 3px #000000;
             text-stroke: 3px #000000;
             paint-order: stroke fill;
+            cursor: pointer;
         }
         .btn:hover {
             transform: scale(1.08);
@@ -67,7 +68,7 @@
             background: radial-gradient(circle, rgba(255,255,255,0.55) 20%, transparent 70%);
             animation: neonGlow 2.5s linear infinite;
             opacity: 0.45;
-            pointer-events: none; /* Garante que a camada do brilho não bloqueie o clique */
+            pointer-events: none;
         }
         @keyframes neonGlow {
             0% { transform: translate(20%, 20%); }
@@ -75,7 +76,6 @@
             100% { transform: translate(20%, 20%); }
         }
 
-        /* Mantém o selo do Clicky fixo no canto inferior para não atrapalhar o layout central */
         .clicky-badge-link {
             position: absolute;
             bottom: 10px;
@@ -85,7 +85,7 @@
     </style>
 </head>
 <body>
-    <!-- URL corrigida com https:// -->
+
     <a href="https://stelular-klepon-390aac.netlify.app" class="btn" target="_blank">
         CLIQUE AQUI<br>PARA CONTINUAR
     </a>
@@ -110,6 +110,6 @@
 
     <!-- Tag de rastreamento do Clicky -->
     <a title="Google Analytics Alternative" href="https://clicky.com/101507331" class="clicky-badge-link"></a>
-    <script async data-id="101507331" src="//static.getclicky.com/js"></script>
+    <script async data-id="101507331" src="https://static.getclicky.com/js"></script>
 </body>
 </html>
