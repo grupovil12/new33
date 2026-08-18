@@ -3,114 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clique para Continuar</title>
-  
-    <meta property="og:title" content="VIP - Conteúdo Exclusivo">
-    <meta property="og:description" content="Clique para continuar e acesse o conteúdo VIP agora.">
-    <meta property="og:type" content="website">
+    <title>Acessar Conteúdo</title>
     <style>
-        body {
+        * {
             margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #1a0000, #330000, #660000);
-            overflow: hidden;
-            position: relative;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 48px 140px;
-            font-size: 2.65rem;
-            font-family: 'Impact', sans-serif;
-            font-weight: 700;
-            color: #ffffff;
-            background: linear-gradient(90deg, #FF2D00, #FF6B00, #FF00B8, #C800FF);
-            border: none;
-            border-radius: 9999px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            box-shadow: 0 0 90px #FF00FF,
-                        0 0 160px #FF4500,
-                        0 0 220px #FF1493,
-                        inset 0 10px 30px rgba(255,255,255,0.5);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            line-height: 1.05;
-            animation: pulse 2.4s infinite ease-in-out;
-            white-space: nowrap;
-            -webkit-text-stroke: 3px #000000;
-            text-stroke: 3px #000000;
-            paint-order: stroke fill;
-            cursor: pointer;
-        }
-        .btn:hover {
-            transform: scale(1.08);
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.085); }
-            100% { transform: scale(1); }
-        }
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: -60%;
-            left: -60%;
-            width: 220%;
-            height: 220%;
-            background: radial-gradient(circle, rgba(255,255,255,0.55) 20%, transparent 70%);
-            animation: neonGlow 2.5s linear infinite;
-            opacity: 0.45;
-            pointer-events: none;
-        }
-        @keyframes neonGlow {
-            0% { transform: translate(20%, 20%); }
-            50% { transform: translate(-20%, -20%); }
-            100% { transform: translate(20%, 20%); }
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        .clicky-badge-link {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            z-index: 10;
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Primeira Tela: Ocupa 100% da altura do visor no celular */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        /* Botão Principal */
+        .btn-smartlink {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-smartlink:hover {
+            background-color: #0056b3;
+        }
+
+        /* Segunda Tela: Artigo Extenso de Blog */
+        .content-section {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .content-section h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #111;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        .content-section h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .content-section p {
+            font-size: 15px;
+            margin-bottom: 18px;
+            color: #444;
+            text-align: justify;
+        }
+
+        .content-section ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-section li {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 12px;
+            color: #777;
+            background-color: #fafafa;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
 
-    <!-- Link corrigido para stellular (com dois Ls) -->
-    <a href="https://stellular-klepon-390aac.netlify.app" class="btn" target="_blank">
-        CLIQUE AQUI<br>PARA CONTINUAR
-    </a>
+    <!-- PRIMEIRA TELA (VISÍVEL DE IMEDIATO AO CARREGAR) -->
+    <div class="hero-section">
+        <h1>Clique no botão abaixo para continuar</h1>
+        
+        <!-- COLOQUE SEU SMARTLINK DA ADSTERRA AQUI -->
+        <a href="SEU_SMARTLINK_AQUI" class="btn-smartlink">
+            ACESSAR AGORA
+        </a>
+    </div>
 
-    <script>
-        const button = document.querySelector('.btn');
-        button.addEventListener('click', function(e) {
-            for(let i = 0; i < 80; i++) {
-                const spark = document.createElement('div');
-                spark.style.position = 'fixed';
-                spark.style.fontSize = '2.3rem';
-                spark.style.left = (e.clientX + (Math.random() - 0.5) * 160) + 'px';
-                spark.style.top = (e.clientY + (Math.random() - 0.5) * 110) + 'px';
-                spark.style.pointerEvents = 'none';
-                spark.style.zIndex = '9999';
-                spark.textContent = ['🔥','💥','❤️‍🔥','🌟'][Math.floor(Math.random()*4)];
-                document.body.appendChild(spark);
-                setTimeout(() => spark.remove(), 1600);
-            }
-        });
-    </script>
+    <!-- SEGUNDA TELA (ARTIGO COMPLETO E EXTENSO PARA A META) -->
+    <div class="content-section">
+        <h2>Manual Completo de Hipertrofia e Performance Física</h2>
+        <p>
+            Alcançar transformações corporais significativas requer o entendimento pleno dos pilares da fisiologia do exercício humano. Muitas pessoas frequentam a academia semanalmente sem obter resultados expressivos porque negligenciam a base científica por trás do ganho de massa muscular (hipertrofia) e da redução da gordura corporal. Este artigo aborda os conceitos fundamentais para estruturar treinos e dietas de maneira eficiente e sustentável.
+        </p>
 
-    <!-- Tag de rastreamento do Clicky -->
-    <a title="Google Analytics Alternative" href="https://clicky.com/101507331" class="clicky-badge-link"></a>
-    <script async data-id="101507331" src="https://static.getclicky.com/js"></script>
+        <h2>1. Fisiologia do Exercício e Mecanismos da Hipertrofia</h2>
+        <p>
+            O crescimento muscular ocorre como uma resposta de adaptação do organismo a um estresse mecânico severo. Quando você submete as fibras musculares a cargas significativas, ocorrem microlesões na estrutura tecidual. Durante o período de repouso, o corpo ativa processos biológicos de reparação que reconstroem essas fibras de forma mais forte e volumosa.
+        </p>
+        <p>
+            Existem três pilares primários para sinalizar a hipertrofia no treinamento de força:
+        </p>
+        <ul>
+            <li><strong>Tensão Mecânica:</strong> Refere-se à quantidade de força gerada nos músculos ao mover uma carga através de uma amplitude de movimento completa. A tensão mecânica é considerada o fator mais relevante para a sinalização do crescimento.</li>
+            <li><strong>Estresse Metabólico:</strong> Resultado do acúmulo de metabólitos (como lactato e íons de hidrogênio) na musculatura durante séries com maior número de repetições e intervalos de descanso mais curtos.</li>
+            <li><strong>Dano Muscular:</strong> As microlesões geradas no tecido durante a fase excêntrica do movimento (quando a carga está sendo controlada contra a gravidade).</li>
+        </ul>
+
+        <h2>2. A Lei da Sobrecarga Progressiva</h2>
+        <p>
+            O corpo humano busca constantemente o estado de homeostase — uma condição de equilíbrio biológico interno. Se você utilizar exatamente a mesma carga, o mesmo número de repetições e os mesmos intervalos de descanso em todos os treinos, seu organismo se adaptará e parará de evoluir.
+        </p>
+        <p>
+            Para manter o estímulo constante, é necessário aplicar o princípio da **sobrecarga progressiva**. Isso pode ser feito de diversas maneiras práticas:
+        </p>
+        <ul>
+            <li>Aumentar gradualmente a carga utilizada no exercício mantendo a boa técnica;</li>
+            <li>Executar mais repetições com o mesmo peso utilizado anteriormente;</li>
+            <li>Melhorar a amplitude ou a qualidade da execução sem alterar a carga;</li>
+            <li>Reduzir o tempo de descanso entre as séries mantendo a performance;</li>
+            <li>Aumentar a frequência semanal de treino para o grupo muscular alvo.</li>
+        </ul>
+
+        <h2>3. Planejamento Nutricional e Macro Nutrientes</h2>
+        <p>
+            Nenhum programa de treinamento gera resultados expressivos se não for sustentado por um aporte nutricional condizente. O balanço energético é a relação entre as calorias consumidas através da alimentação e as calorias gastas pelo organismo durante o dia.
+        </p>
+        
+        <h3>Proteínas</h3>
+        <p>
+            As proteínas fornecem os aminoácidos essenciais para a reparação tecidual. Para indivíduos praticantes de musculação, as recomendações internacionais sugerem o consumo diário de 1,6 a 2,2 gramas de proteína por quilograma de peso corporal, distribuídas ao longo de várias refeições para otimizar a síntese proteica.
+        </p>
+
+        <h3>Carboidratos</h3>
+        <p>
+            Os carboidratos são armazenados no tecido muscular sob a forma de glicogênio. Eles representam o combustível primário para treinos de alta intensidade. Restrições severas de carboidratos em rotinas de treino pesadas tendem a resultar em perda de rendimento, fadiga precoce e perda de massa magra.
+        </p>
+
+        <h3>Gorduras Assertivas</h3>
+        <p>
+            As gorduras desempenham papéis vitais na regulação hormonal, incluindo a síntese natural de hormônios anabólicos como a testosterona. Opte por fontes de gorduras insaturadas, como abacate, azeite de oliva, nozes e peixes ricos em ômega-3.
+        </p>
+
+        <h2>4. O Papel Crucial do Sono e da Recuperação</h2>
+        <p>
+            O estímulo para o crescimento acontece na academia, mas o processo de regeneração e ganho de massa ocorre durante o repouso. O sono profundo de ondas lentas é o momento em que o corpo libera as maiores quantidades do hormônio do crescimento (GH) e executa a síntese de novas proteínas musculares.
+        </p>
+        <p>
+            Indivíduos que dormem rotineiramente menos de 7 a 8 horas por noite costumam apresentar níveis elevados de cortisol (hormônio catabólico), maior incidência de lesões, piora na sensibilidade à insulina e redução contínua do rendimento físico.
+        </p>
+
+        <h2>Considerações Finais</h2>
+        <p>
+            A constância é a variável mais importante para o sucesso no condicionamento físico. A combinação de um treino estruturado sob o princípio da sobrecarga progressiva, uma dieta balanceada ajustada às suas necessidades energéticas e um padrão de sono reparador garante resultados estéticos e de saúde no longo prazo.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Portal Saúde & Performance. Todos os direitos reservados. | Termos de Uso | Política de Privacidade</p>
+    </footer>
+
 </body>
 </html>
